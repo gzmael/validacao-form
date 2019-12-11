@@ -53,6 +53,9 @@ body {
   display: block;
   width: 100%;
 }
+.input-group input:focus {
+  border-color: #20b2aa;
+}
 
 .input-group input::placeholder {
   color: #686868;

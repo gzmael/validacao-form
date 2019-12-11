@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cadastro | Biblioteca</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Formulário -->
+      <form action="" id="formulario" method="POST" name="formulario">
+        <legend>
+          Cadastro Biblioteca
+        </legend>
+        <div class="input-group">
+          <label for="nome">Nome:</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Insira seu nome"
+          />
+        </div>
+        <div class="input-group">
+          <label for="sobrenome">Sobrenome:</label>
+          <input
+            type="text"
+            id="sobrenome"
+            placeholder="Insira seu sobrenome"
+          />
+        </div>
+        <div class="input-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" placeholder="Insira seu e-mail" />
+        </div>
+        <div class="input-group">
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" placeholder="Insira a senha" />
+        </div>
+        <div class="colunas">
+          <div class="input-group">
+            <label for="telefone">Telefone:</label>
+            <input
+              type="text"
+              id="telefone"
+              placeholder="Insira seu Telefone"
+            />
+          </div>
+          <div class="input-group">
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" placeholder="Insira seu CEP" />
+          </div>
+        </div>
+        <div class="colunas">
+          <div class="input-group">
+            <label for="sexo">Sexo:</label>
+            <select name="sexo" id="sexo">
+              <option value="">informar...</option>
+              <option value="m">Masculino</option>
+              <option value="f">Feminino</option>
+              <option value="x">Não informar</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="newsletter">Newsletter</label>
+            <input type="checkbox" id="newsletter" />
+            <small>Desejo receber novidades</small>
+          </div>
+        </div>
+        <div class="footer">
+          <button type="button" class="botao" onclick="validar()">
+            Enviar
+          </button>
+        </div>
+      </form>
+
+      <script>
+        /* Função Validar */
+        function validar() {
+          // pegando o valor do nome pelos names
+          var nome = document.getElementById("nome");
+          var sobrenome = document.getElementById("sobrenome");
+          var email = document.getElementById("email");
+          var senha = document.getElementById("senha");
+          var telefone = document.getElementById("telefone");
+          var cep = document.getElementById("cep");
+          var sexo = document.getElementById("sexo");
+          var newsletter = document.getElementById("newsletter").checked;
+
+          // verificar se o nome está vazio
+          if (nome.value == "") {
+            alert("Nome não informado");
+
+            // Deixa o input com o focus
+            nome.focus();
+            // retorna a função e não olha as outras linhas
+            return;
+          }
+          if (sobrenome.value == "") {
+            alert("Sobrenome não informado");
+            sobrenome.focus();
+            return;
+          }
+          if (email.value == "") {
+            alert("E-mail não informado");
+            email.focus();
+            return;
+          }
+          if (senha.value == "") {
+            alert("Senha não informada");
+            senha.focus();
+            return;
+          }
+          if (telefone.value == "") {
+            alert("Telefone não informado");
+            telefone.focus();
+            return;
+          }
+          if (cep.value == "") {
+            alert("CEP não informado");
+            cep.focus();
+            return;
+          }
+          if (sexo.value == "") {
+            alert("CEP não informado");
+            sexo.focus();
+            return;
+          }
+          alert("Formulário enviado!");
+          // envia o formulário
+          //formulario.submit();
+        }
+      </script>
+    </div>
+  </body>
+</html>
