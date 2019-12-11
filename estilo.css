@@ -1,0 +1,83 @@
+html,
+:root {
+  height: 100%;
+}
+input {
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  background: linear-gradient(180deg, #fe8c00 0%, #f83600 100%);
+  background-size: 100%;
+  margin: 0;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+#formulario {
+  width: 500px;
+  min-height: 400px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 30px;
+}
+#formulario legend {
+  color: #f94d00;
+  font-weight: bold;
+  text-align: center;
+  margin: 5px 0;
+  font-size: 22px;
+}
+.input-group {
+  margin: 10px 0;
+}
+.input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #393939;
+  cursor: pointer;
+}
+
+.input-group input:not([type="checkbox"]) {
+  background: #dedddd;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  padding: 8px 10px;
+  display: block;
+  width: 100%;
+}
+
+.input-group input::placeholder {
+  color: #686868;
+  font-weight: 300;
+}
+.colunas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.colunas .input-group {
+  width: 48%;
+}
+.footer {
+  text-align: center;
+}
+.botao {
+  background: #73a4dc;
+  border-radius: 2px;
+  padding: 10px 15px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.botao:hover {
+  background: #5988bd;
+}
